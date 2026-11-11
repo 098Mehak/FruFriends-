@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { CHARACTERS, IMAGES } from '../../data/frufriends';
 import { sounds } from '../../utils/sound';
+import { AssetImage } from '../AssetImage';
 
 interface Slide1Props {
   onExploreCollection: () => void;
@@ -395,12 +396,16 @@ export const Slide1Introduction: React.FC<Slide1Props> = ({ onExploreCollection 
             className="relative w-full max-w-2xl rounded-2xl overflow-hidden glass-card p-2 shadow-xl border-2 border-[#E9D5FF] group"
           >
             <div className="relative aspect-video rounded-xl overflow-hidden bg-[#FAF5FF]">
-              {/* Displays Tanjiro's new, stunning Water Dragon sword action */}
-              <img
+              <AssetImage
                 src={getHeroImage()}
                 alt={actionViewMode === 'water_dragon' ? 'Tanjiro Kamado Water Breathing Tenth Form Dragon Slash' : 'FruFriends Anime Confectionery'}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
+                fallbackCandidates={[
+                  '/assets/images/tanjiro_water_dragon_slash_1794421346328.jpg',
+                  '/assets/images/anime_character_chocolates_six_1794419628329.jpg'
+                ]}
+                fallbackTitle={actionViewMode === 'water_dragon' ? 'Tanjiro Kamado · Water Dragon' : 'FruFriends Confectionery'}
+                fallbackSubtitle="Artisanal Anime Chocolate Collection"
               />
 
               {/* Gradient scrim */}

@@ -1,3 +1,20 @@
+import heroGiftboxImg from '../assets/images/frufriends_hero_giftbox_1794418955578.jpg';
+import collectionLineupImg from '../assets/images/anime_character_chocolates_six_1794419628329.jpg';
+import crossSectionImg from '../assets/images/frufriends_chocolate_cross_section_1794418957185.jpg';
+import mysteryUnboxingImg from '../assets/images/magical_enchanted_mystery_box_1794420806222.jpg';
+import tanjiroSculptedImg from '../assets/images/tanjiro_sculpted_chocolate_1794419625887.jpg';
+import nezukoSculptedImg from '../assets/images/nezuko_sculpted_chocolate_1794419626676.jpg';
+import rengokuSculptedImg from '../assets/images/rengoku_sculpted_chocolate_1794419653324.jpg';
+import giyuSculptedImg from '../assets/images/giyu_sculpted_chocolate_1794420251891.jpg';
+import gojoSculptedImg from '../assets/images/gojo_sculpted_chocolate_1794419653681.jpg';
+import zenitsuSculptedImg from '../assets/images/zenitsu_sculpted_chocolate_1794420253280.jpg';
+import tanjiroWaterDragonImg from '../assets/images/tanjiro_water_dragon_slash_1794421346328.jpg';
+import tanjiroSunBreathingImg from '../assets/images/tanjiro_sun_breathing_elegance_1794421346701.jpg';
+import nezukoCuteActionImg from '../assets/images/nezuko_cute_action_blossom_1794420254064.jpg';
+import tanjiroMiniModelImg from '../assets/images/tanjiro_mini_model_gift_1794420808743.jpg';
+import gojoMiniModelImg from '../assets/images/gojo_mini_model_gift_1794420808365.jpg';
+import rengokuMiniModelImg from '../assets/images/rengoku_mini_model_gift_1794420808320.jpg';
+
 export interface FruFriendCharacter {
   id: string;
   name: string;
@@ -43,7 +60,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: '64% Single-Origin Ecuadorian Dark Chocolate Sculpted Head & Kimono',
     fruitFilling: 'Artisanal Amaou Strawberry reduction with crushed berry seeds & ruby berry nectar',
     mouldingMotif: 'Character-sculpted chocolate with burgundy spiky hair, forehead scar & green-black checkered haori',
-    sculptedChocolateImage: '/src/assets/images/tanjiro_sculpted_chocolate_1794419625887.jpg',
+    sculptedChocolateImage: tanjiroSculptedImg,
     miniModelGift: {
       title: 'Tanjiro Kamado · Hinokami Kagura Chibi',
       series: 'FruFriends Series 1 Mini Companions',
@@ -51,7 +68,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Ultra Rare (★ 1 of 500)',
       specialFeature: 'Detachable Flaming Blade & Lavender Velvet Display Cushion',
       description: 'Delicately painted miniature figurine with fiery eyes, iconic hanafuda earrings, and miniature display plinth.',
-      modelImage: '/src/assets/images/tanjiro_mini_model_gift_1794420808743.jpg'
+      modelImage: tanjiroMiniModelImg
     },
     tastingNotes: ['Tart Crimson Berry', 'Rich Bittersweet Cocoa', 'Subtle Roasted Nib Finish'],
     themeColor: {
@@ -75,7 +92,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: 'Silky 36% White & Natural Ruby Cocoa Sculpted Chibi Form',
     fruitFilling: 'Emerald Kiwi purée with natural seeds, lime-mint whisper & refreshing acidity',
     mouldingMotif: 'Character-sculpted chocolate with flowing dark hair, vermilion tips, pink kimono & green bamboo muzzle',
-    sculptedChocolateImage: '/src/assets/images/nezuko_sculpted_chocolate_1794419626676.jpg',
+    sculptedChocolateImage: nezukoSculptedImg,
     miniModelGift: {
       title: 'Nezuko Kamado · Bamboo Blossom Chibi',
       series: 'FruFriends Series 1 Mini Companions',
@@ -83,7 +100,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Secret Rare (★ 1 of 350)',
       specialFeature: 'Pearlescent Kimono Detailing & Cherry Blossom Sparkles',
       description: 'Charming figurine with gentle wide eyes, gradient orange hair tips, and golden asanoha pattern.',
-      modelImage: '/src/assets/images/nezuko_cute_action_blossom_1794420254064.jpg'
+      modelImage: nezukoCuteActionImg
     },
     tastingNotes: ['Zesty Kiwi Tang', 'Creamy Vanilla Milk', 'Crisp Green Crunch'],
     themeColor: {
@@ -107,7 +124,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: 'Flame-Marbled Dark & Golden White Chocolate Sculpted Bust',
     fruitFilling: 'Sun-drenched Ratnagiri Alphonso Mango coulis infused with warm vanilla bean',
     mouldingMotif: 'Character-sculpted chocolate bust with blazing yellow-and-scarlet hair & Hashira uniform buttons',
-    sculptedChocolateImage: '/src/assets/images/rengoku_sculpted_chocolate_1794419653324.jpg',
+    sculptedChocolateImage: rengokuSculptedImg,
     miniModelGift: {
       title: 'Kyojuro Rengoku · Flame Pillar Standing Mini',
       series: 'FruFriends Series 1 Mini Companions',
@@ -115,7 +132,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Ultra Rare (★ 1 of 500)',
       specialFeature: 'Ornate Filigree Gold Plinth & Billowing Flame Cloak',
       description: 'Dynamic heroic sculpt featuring sweeping flame haori, confident smile, and radiant gradient hair.',
-      modelImage: '/src/assets/images/rengoku_mini_model_gift_1794420808320.jpg'
+      modelImage: rengokuMiniModelImg
     },
     tastingNotes: ['Sun-Ripened Tropical Mango', 'Warm Cinnamon Spice', 'Velvety Caramel Cocoa'],
     themeColor: {
@@ -139,7 +156,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: 'Dual-Tone Asymmetric Sapphire Gloss & Burgundy Character Chocolate',
     fruitFilling: 'Wild Himalayan Blueberry slow-simmered reduction with lavender floral note',
     mouldingMotif: 'Character-sculpted chocolate with tied dark ponytail & split dual-pattern geometric water haori',
-    sculptedChocolateImage: '/src/assets/images/giyu_sculpted_chocolate_1794420251891.jpg',
+    sculptedChocolateImage: giyuSculptedImg,
     miniModelGift: {
       title: 'Giyu Tomioka · Water Surface Slice Chibi',
       series: 'FruFriends Series 1 Mini Companions',
@@ -147,7 +164,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Super Rare (★ 1 of 400)',
       specialFeature: 'Dual-Fabric Geometric Haori Print & Blue Sword Gleam',
       description: 'Stoic pose with high-gloss hair, unsheathed blue-tint blade, and crystal-clear water ripple plinth.',
-      modelImage: '/src/assets/images/giyu_sculpted_chocolate_1794420251891.jpg'
+      modelImage: giyuSculptedImg
     },
     tastingNotes: ['Midnight Wild Berry', 'Deep Floral Lavender', 'Intense 70% Dark Cocoa'],
     themeColor: {
@@ -171,7 +188,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: 'Sleek Mirror-Gloss Noir Chocolate Sculpted Bust with White Spiky Hair',
     fruitFilling: 'Yamanashi White Peach purée with sweet lychee syrup & white blossom essence',
     mouldingMotif: 'Character-sculpted chocolate bust with spiky white chocolate locks, dark blindfold & high collar jacket',
-    sculptedChocolateImage: '/src/assets/images/gojo_sculpted_chocolate_1794419653681.jpg',
+    sculptedChocolateImage: gojoSculptedImg,
     miniModelGift: {
       title: 'Satoru Gojo · Limitless Void Chibi Mini',
       series: 'FruFriends Series 1 Mini Companions',
@@ -179,7 +196,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Ultra Rare (★ 1 of 500)',
       specialFeature: 'Illuminated Lavender Crystal Base & Domain Finger Sign',
       description: 'Iconic sorcerer sculpt with limitless domain pose, sculpted white hair, and luminous crystal plinth.',
-      modelImage: '/src/assets/images/gojo_mini_model_gift_1794420808365.jpg'
+      modelImage: gojoMiniModelImg
     },
     tastingNotes: ['Silky White Peach Nectar', 'Luminescent Lychee', 'Pure Madagascar Cocoa'],
     themeColor: {
@@ -203,7 +220,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
     chocolateShell: 'Artisanal Natural Milk Chocolate Sculpted Form with Layered Yellow Hair',
     fruitFilling: 'Slow-caramelized ripe Banana purée with golden honey butterscotch and popping crystal',
     mouldingMotif: 'Character-sculpted chocolate with blonde block-cut hair, orange tips & triangle yellow haori',
-    sculptedChocolateImage: '/src/assets/images/zenitsu_sculpted_chocolate_1794420253280.jpg',
+    sculptedChocolateImage: zenitsuSculptedImg,
     miniModelGift: {
       title: 'Zenitsu Agatsuma · Thunderclap and Flash Chibi',
       series: 'FruFriends Series 1 Mini Companions',
@@ -211,7 +228,7 @@ export const CHARACTERS: FruFriendCharacter[] = [
       rarity: 'Rare (★ 1 of 600)',
       specialFeature: 'Dual-Expression Asleep Lightning Strike & Gold Foil Plinth',
       description: 'Dual-expression asleep-awakened thunder god with electric gold finish and miniature sparrow companion.',
-      modelImage: '/src/assets/images/zenitsu_sculpted_chocolate_1794420253280.jpg'
+      modelImage: zenitsuSculptedImg
     },
     tastingNotes: ['Sweet Caramelized Banana', 'Golden Honey Toffee', 'Buttery Milk Chocolate'],
     themeColor: {
@@ -227,23 +244,23 @@ export const CHARACTERS: FruFriendCharacter[] = [
 ];
 
 export const IMAGES = {
-  heroGiftbox: '/src/assets/images/frufriends_hero_giftbox_1794418955578.jpg',
-  collectionLineup: '/src/assets/images/anime_character_chocolates_six_1794419628329.jpg',
-  crossSection: '/src/assets/images/frufriends_chocolate_cross_section_1794418957185.jpg',
-  mysteryUnboxing: '/src/assets/images/magical_enchanted_mystery_box_1794420806222.jpg',
-  tanjiroSculpted: '/src/assets/images/tanjiro_sculpted_chocolate_1794419625887.jpg',
-  nezukoSculpted: '/src/assets/images/nezuko_sculpted_chocolate_1794419626676.jpg',
-  rengokuSculpted: '/src/assets/images/rengoku_sculpted_chocolate_1794419653324.jpg',
-  giyuSculpted: '/src/assets/images/giyu_sculpted_chocolate_1794420251891.jpg',
-  gojoSculpted: '/src/assets/images/gojo_sculpted_chocolate_1794419653681.jpg',
-  zenitsuSculpted: '/src/assets/images/zenitsu_sculpted_chocolate_1794420253280.jpg',
-  tanjiroWaterDragon: '/src/assets/images/tanjiro_water_dragon_slash_1794421346328.jpg',
-  tanjiroSunBreathing: '/src/assets/images/tanjiro_sun_breathing_elegance_1794421346701.jpg',
-  tanjiroSwordAction: '/src/assets/images/tanjiro_water_dragon_slash_1794421346328.jpg',
-  nezukoCuteAction: '/src/assets/images/nezuko_cute_action_blossom_1794420254064.jpg',
-  tanjiroMiniModel: '/src/assets/images/tanjiro_mini_model_gift_1794420808743.jpg',
-  gojoMiniModel: '/src/assets/images/gojo_mini_model_gift_1794420808365.jpg',
-  rengokuMiniModel: '/src/assets/images/rengoku_mini_model_gift_1794420808320.jpg',
+  heroGiftbox: heroGiftboxImg,
+  collectionLineup: collectionLineupImg,
+  crossSection: crossSectionImg,
+  mysteryUnboxing: mysteryUnboxingImg,
+  tanjiroSculpted: tanjiroSculptedImg,
+  nezukoSculpted: nezukoSculptedImg,
+  rengokuSculpted: rengokuSculptedImg,
+  giyuSculpted: giyuSculptedImg,
+  gojoSculpted: gojoSculptedImg,
+  zenitsuSculpted: zenitsuSculptedImg,
+  tanjiroWaterDragon: tanjiroWaterDragonImg,
+  tanjiroSunBreathing: tanjiroSunBreathingImg,
+  tanjiroSwordAction: tanjiroWaterDragonImg,
+  nezukoCuteAction: nezukoCuteActionImg,
+  tanjiroMiniModel: tanjiroMiniModelImg,
+  gojoMiniModel: gojoMiniModelImg,
+  rengokuMiniModel: rengokuMiniModelImg,
 };
 
 

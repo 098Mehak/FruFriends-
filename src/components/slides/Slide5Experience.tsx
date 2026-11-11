@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { CHARACTERS, IMAGES } from '../../data/frufriends';
 import { sounds } from '../../utils/sound';
+import { AssetImage } from '../AssetImage';
 
 interface Slide5Props {
   onRestart: () => void;
@@ -100,11 +101,18 @@ export const Slide5Experience: React.FC<Slide5Props> = ({ onRestart }) => {
           >
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#FAF5FF]">
               {/* Display either the Magical Mystery Box or the Specific Anime Model Gift */}
-              <img
+              <AssetImage
                 src={activeView === 'mystery_box' ? IMAGES.mysteryUnboxing : currentGift.miniModelGift.modelImage}
                 alt={activeView === 'mystery_box' ? 'FruFriends Enchanted Magical Mystery Box' : `${currentGift.name} Miniature Collectible Anime Model`}
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
-                referrerPolicy="no-referrer"
+                fallbackCandidates={[
+                  IMAGES.mysteryUnboxing,
+                  currentGift.sculptedChocolateImage,
+                  '/assets/images/magical_enchanted_mystery_box_1794420806222.jpg',
+                  '/assets/images/anime_character_chocolates_six_1794419628329.jpg'
+                ]}
+                fallbackTitle={activeView === 'mystery_box' ? 'Enchanted Mystery Box' : `${currentGift.name} Model Gift`}
+                fallbackSubtitle={currentGift.miniModelGift.title}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-85" />

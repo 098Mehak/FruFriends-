@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Eye, Sparkles, Layers, ShieldCheck, Quote, Heart, HeartHandshake } from 'lucide-react';
 import { CHARACTERS, IMAGES, FruFriendCharacter } from '../../data/frufriends';
 import { sounds } from '../../utils/sound';
+import { AssetImage } from '../AssetImage';
 
 export const Slide2Characters: React.FC = () => {
   const [selectedCharIndex, setSelectedCharIndex] = useState<number>(0);
@@ -140,12 +141,17 @@ export const Slide2Characters: React.FC = () => {
         <div className="lg:col-span-6 relative flex flex-col items-center justify-center">
           <div className="relative w-full max-w-lg aspect-4/3 rounded-2xl overflow-hidden glass-card p-2 border border-[#E5C378]/40 shadow-xl">
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#FFF5F7]">
-              {/* Product Photo based on ViewMode */}
-              <img
+              <AssetImage
                 src={getProductImage()}
                 alt={`${char.name} ${char.fruit} Edible Chocolate Sculpted Form`}
                 className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
-                referrerPolicy="no-referrer"
+                fallbackCandidates={[
+                  char.sculptedChocolateImage,
+                  IMAGES.collectionLineup,
+                  '/assets/images/anime_character_chocolates_six_1794419628329.jpg'
+                ]}
+                fallbackTitle={`${char.name} · ${char.fruit} Chocolate`}
+                fallbackSubtitle={char.flavorProfile}
               />
 
               {/* Gradient scrim */}

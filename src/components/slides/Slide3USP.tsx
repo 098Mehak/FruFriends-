@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, Utensils, HeartHandshake, Layers, CheckCircle2 } from 'lucide-react';
 import { USP_PILLARS, IMAGES, CHARACTERS } from '../../data/frufriends';
 import { sounds } from '../../utils/sound';
+import { AssetImage } from '../AssetImage';
 
 export const Slide3USP: React.FC = () => {
   const [activePillar, setActivePillar] = useState<number>(1); // default on 02 Real-Fruit
@@ -103,13 +104,20 @@ export const Slide3USP: React.FC = () => {
           <div className="relative w-full max-w-lg rounded-2xl overflow-hidden glass-card p-2 border border-[#E5C378]/40 shadow-xl">
             {/* Visual Box */}
             <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-[#FFF5F7]">
-              <img
+              <AssetImage
                 src={isBrokenOpen ? IMAGES.crossSection : IMAGES.collectionLineup}
                 alt="FruFriends Chocolate Break-Open Fruit Core"
                 className={`w-full h-full object-cover transition-all duration-700 ${
                   isBrokenOpen ? 'scale-105' : 'scale-100'
                 }`}
-                referrerPolicy="no-referrer"
+                fallbackCandidates={[
+                  IMAGES.crossSection,
+                  IMAGES.collectionLineup,
+                  '/assets/images/frufriends_chocolate_cross_section_1794418957185.jpg',
+                  '/assets/images/anime_character_chocolates_six_1794419628329.jpg'
+                ]}
+                fallbackTitle="Real-Fruit Chocolate Core"
+                fallbackSubtitle="Artisanal Fruit Purée & Single-Origin Cocoa Shell"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-85" />

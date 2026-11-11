@@ -10,8 +10,9 @@ import {
   Calendar,
   Percent
 } from 'lucide-react';
-import { AGE_SEGMENTS, MARKET_STATS } from '../../data/frufriends';
+import { AGE_SEGMENTS, MARKET_STATS, IMAGES } from '../../data/frufriends';
 import { sounds } from '../../utils/sound';
+import { AssetImage } from '../AssetImage';
 
 export const Slide4Market: React.FC = () => {
   const [selectedAge, setSelectedAge] = useState<number>(2); // Default Young Adults
@@ -123,19 +124,43 @@ export const Slide4Market: React.FC = () => {
           </div>
 
           {/* Active Segment Detail Callout */}
-          <div className="p-3 rounded-xl bg-white/90 border border-[#E5C378]/35 shadow-xs text-xs">
-            <div className="font-mono text-[10px] text-[#C99C42] uppercase mb-1 font-bold">
-              Core Drivers for {AGE_SEGMENTS[selectedAge].group} (Age {AGE_SEGMENTS[selectedAge].ageRange}):
+          <div className="p-3 rounded-xl bg-white/90 border border-[#E5C378]/35 shadow-xs text-xs space-y-2.5">
+            <div>
+              <div className="font-mono text-[10px] text-[#C99C42] uppercase mb-1 font-bold">
+                Core Drivers for {AGE_SEGMENTS[selectedAge].group} (Age {AGE_SEGMENTS[selectedAge].ageRange}):
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {AGE_SEGMENTS[selectedAge].drivers.map((driver, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-1 rounded-md bg-[#FFF5F7] text-[#4A2D22] border border-[#E5C378]/30 text-[11px] font-medium font-body"
+                  >
+                    ✦ {driver}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-1.5">
-              {AGE_SEGMENTS[selectedAge].drivers.map((driver, i) => (
-                <span
-                  key={i}
-                  className="px-2 py-1 rounded-md bg-[#FFF5F7] text-[#4A2D22] border border-[#E5C378]/30 text-[11px] font-medium font-body"
-                >
-                  ✦ {driver}
-                </span>
-              ))}
+
+            {/* Visual Product Alignment Thumbnail with Asset Verification */}
+            <div className="pt-2 border-t border-[#E5C378]/25 flex items-center gap-3">
+              <div className="w-14 h-11 rounded-lg overflow-hidden shrink-0 border border-[#E9D5FF] shadow-xs">
+                <AssetImage
+                  src={IMAGES.heroGiftbox}
+                  alt="FruFriends Luxury Packaging"
+                  className="w-full h-full object-cover"
+                  fallbackCandidates={[
+                    IMAGES.collectionLineup,
+                    '/assets/images/frufriends_hero_giftbox_1794418955578.jpg'
+                  ]}
+                  fallbackTitle="Gift Box"
+                  fallbackSubtitle="Luxury Confectionery"
+                  showFallbackCard={false}
+                />
+              </div>
+              <div className="text-[11px] leading-tight">
+                <span className="font-bold text-[#6B1D2F] block">Multi-Generational Luxury Packaging</span>
+                <span className="text-[#5C382A] text-[10px]">Keepsake gift box and sculpted chocolates tailored for {AGE_SEGMENTS[selectedAge].group.toLowerCase()}.</span>
+              </div>
             </div>
           </div>
         </div>
