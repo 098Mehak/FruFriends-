@@ -1,0 +1,6 @@
+{
+  "name": "FruFriends - Anime Fruit Chocolate Collection",
+  "description": "Premium animated interactive 5-slide product presentation for FruFriends luxury anime fruit chocolate collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

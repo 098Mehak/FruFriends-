@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Outfit', sans-serif;
+  }
+}
+
+.font-serif-brand {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-display-modern {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphism surfaces for Light Pink & Lavender Theme */
+.glass-panel {
+  background: rgba(255, 248, 252, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 180, 254, 0.5);
+  box-shadow: 0 12px 36px -8px rgba(168, 85, 247, 0.14);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(233, 213, 255, 0.6);
+  box-shadow: 0 16px 40px -8px rgba(236, 72, 153, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(221, 214, 254, 0.55);
+  box-shadow: 0 8px 28px -6px rgba(168, 85, 247, 0.09);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(192, 132, 252, 0.7);
+  box-shadow: 0 16px 40px -8px rgba(236, 72, 153, 0.18);
+}
+
+/* Light Pink & Lavender Text Gradients */
+.text-lavender-gradient {
+  background: linear-gradient(135deg, #6B21A8 0%, #9333EA 50%, #C026D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #7A4B13 0%, #C99C42 50%, #9333EA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-pink-gradient {
+  background: linear-gradient(135deg, #9D174D 0%, #DB2777 50%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gentle floating animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: gentle-float 7s ease-in-out 1.5s infinite;
+}
+
+.animate-float-slow {
+  animation: gentle-float 9s ease-in-out 3s infinite;
+}
+
+/* Foil sheen animation for cards */
+@keyframes foil-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.foil-shimmer {
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 225, 160, 0.25) 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 225, 160, 0.25) 55%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  animation: foil-shimmer 4s infinite linear;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(18, 11, 15, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 195, 120, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 195, 120, 0.45);
+}
